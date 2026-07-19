@@ -24,13 +24,13 @@ public class MemoContoroller {
         return ResponseEntity.ok(memoService.save(request));
     }
 
-    //RESEARCH - ALL
+    //READ - ALL
     @GetMapping("/memos")
     public ResponseEntity<List<GetMemoResponse>> getAll() {
         return ResponseEntity.ok(memoService.getAll());
     }
 
-    //RESEARCG - ONE
+    //READ - ONE
     @GetMapping("/momes/{id}")
     public ResponseEntity<GetMemoResponse> getOne(@PathVariable Long id) {
         return ResponseEntity.ok(memoService.getOne(id));
