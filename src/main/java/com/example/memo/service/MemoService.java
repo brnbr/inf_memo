@@ -28,7 +28,7 @@ public class MemoService {
         );
     }
 
-    //RESEARCH - All
+    //READ - All
     @Transactional(readOnly = true)
     public List<GetMemoResponse> getAll() {
         List<Memo> memos = memoRepository.findAll();
@@ -44,7 +44,7 @@ public class MemoService {
         return dtos;
     }
 
-    //REASERCH - One
+    //READ - One
     @Transactional(readOnly = true)
     public GetMemoResponse getOne(Long id) {
         Memo memo = memoRepository.findById(id).orElseThrow(
